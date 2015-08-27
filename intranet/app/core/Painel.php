@@ -7,7 +7,7 @@ class Painel
 	
 	private $painelTitle;
 	
-	private $painelColor = 'default';
+	private $painelColor = 'primary';
 	
 	private $grid;
 	
@@ -24,7 +24,7 @@ class Painel
 				danger -
 				default
 	 */
-	public function setPainelColor($painelColor='default')
+	public function setPainelColor($painelColor='primary')
 	{
 		$this->painelColor = $painelColor;
 		return $this;
@@ -71,7 +71,7 @@ class Painel
 					</div>
 			  	<div class='panel-body'>");
 			$this->validateGrid($show);
-		  echo("</div>
+		  echo("</div>                                 
 			  </div>");
 		}
 	

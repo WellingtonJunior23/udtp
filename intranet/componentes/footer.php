@@ -1,4 +1,4 @@
-
+</div>
 
 <footer>
         <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -13,11 +13,13 @@
 	</nav>     
 	<nav class="navbar"></nav>
 </footer>
-
-<?php        
-             include 'componentes/arquivosjs.php';
-?>
-
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/my-data-table.js"></script>
+    <script src="js/my-timer.js"></script>
+    <script src="js/my-efeitos-jquery.js"></script>
+    <script src="js/jquery.confirm.min.js"></script>
 </body>
 </html>
       

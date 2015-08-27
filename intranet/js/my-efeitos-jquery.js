@@ -7,5 +7,11 @@ $alert(document).ready(function(){
         function(){
             $alert(this).next().toggle('slow');
         });
+        
+        $alert(".simpleConfirm").confirm({    	
+    	text: "Tem certeza que deseja remover a imagem ?",
+    	confirmButton: "Sim",
+    	cancelButton: "Não"    	    	
+    });
 
 });

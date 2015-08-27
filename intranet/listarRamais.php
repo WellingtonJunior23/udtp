@@ -1,113 +1,44 @@
 <?php
-    include 'componentes/topo.php';
-    
-    include_once 'bootstrap.php';
+include_once 'componentes/topo.php';
+
+include_once 'bootstrap.php';
 ?>
 
-	<div class="container-fluid ">
-		<div class="col-sm-3">
-		
-		<div class="jumbotron">
-			<div>	
-                            <img alt="CEADIS" src="img/udtp_2.png"  class="img-rounded img-thumbnail img-responsive" />
-			</div>
-		</div>
-						
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title"><span class="glyphicon glyphicon-share-alt"></span> LINKS DE ACESSO</h3>
-				</div>
-				<div class="panel-body">
-					<ul class="list-unstyled">
-					<?php 
-						include_once 'links.php';
-					?>					
-					</ul>
-				</div>
-			<div class="panel-footer"></div>
-		</div>
+<?php
+include_once 'paineis.php';
+?>	
 
-		<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title"><span class="glyphicon glyphicon-info-sign"></span> INFORMAÇÕES</h3>
-				</div>
-				<div class="panel-body">
-					<ul class="list-unstyled">
-				<?php 
-					include_once 'linksRamais.php';
-				?>
-					
-					</ul>
-				</div>
-			<div class="panel-footer"></div>
-		</div>
-                    
-                <div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title"><span class="glyphicon glyphicon-gift"></span> ANIVERSARIANTES</h3>
-				</div>
-				<div class="panel-body">
-					<ul class="list-unstyled">				
-					                                                        
-                                            <?php
-                                            include_once 'listaraniversariantes.php';
-                                            ?>
-	
-					</ul>
-				</div>
-			<div class="panel-footer"></div>
-		</div>        
-		
-                <div class="panel panel-primary">
-		       <div class="panel-heading">
-                        <h3 class="panel-title"><span class="glyphicon glyphicon-wrench"></span> SISTEMAS DE HOMOLOGAÇÃO</h3>
-		       </div>
-				<div class="panel-body">
-					<ul class="list-unstyled">
-									
-					<li><a href="http://172.17.0.13" target="_blank"><span class="glyphicon glyphicon-share-alt"></span> WMS - Lois Homologação</a></li>
-                                            
-					</ul>
-				</div>
-			<div class="panel-footer"></div>
-		</div>
+<div class="container col-sm-9">
 
-	</div>
-	<div class="container col-sm-9">
-	
-		<div class="jumbotron ">
+    <div class="jumbotron ">
 
-			
-    <?php
-    
-    $grid = new app\core\Grid(); 
-    $file = new app\core\ReadCsv();
-                                   
-    $file->readFileCsv('arquivos/contatos_udtp.csv');
-    
-    function convertUtf8($var)
-    { return utf8_encode($var); }
-    
-    $grid->setCabecalho($file->getColumn())
-         ->setDados($file->getLines())
-         ->addFunctionColumn('convertUtf8', 1)
-         ->addFunctionColumn('convertUtf8', 2);
-    
-    $painel = new app\core\Painel();
-    $painel->setPainelTitle('Lista de Ramais')
-           ->addGrid($grid)->setPainelColor()
-           ->show();
-    
-    
-    ?>
-			
-		</div>		
-	</div>
-</div>
-	
-	<?php
-             include 'componentes/footer.php';
+        <?php
+        $grid = new app\core\Grid();
+        $file = new app\core\ReadCsv();
+
+        $file->readFileCsv('arquivos/contatos_udtp.csv');
+
+        function convertUtf8($var) {
+            return utf8_encode($var);
+        }
+
+        $grid->setCabecalho($file->getColumn())
+                ->setDados($file->getLines())
+                ->addFunctionColumn('convertUtf8', 1)
+                ->addFunctionColumn('convertUtf8', 2);
+
+        $painel = new app\core\Painel();
+        $painel->setPainelTitle('Lista de Ramais')
+                ->addGrid($grid)->setPainelColor()
+                ->show();
         ?>
 
-        
+    </div>		
+</div>
+
+<?php
+include_once 'componentes/footer.php';
+?>
+
+
 
