@@ -1,6 +1,6 @@
 <?php
 
-namespace system\core;
+namespace app\core;
 
 class Error
 {
