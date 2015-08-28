@@ -1,4 +1,5 @@
 <?php
+    include_once 'src/config/config.php';
     include_once 'componentes/topo.php';
     
     if(!$_SESSION['permissao_gi']){

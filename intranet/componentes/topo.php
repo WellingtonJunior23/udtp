@@ -27,7 +27,7 @@ include_once './bootstrap.php';
 	  
 	<div class="container-fluid collapse navbar-collapse" id="menu-principal">
             <h4 class="navbar-text"><a href="index.php"><span class="glyphicon glyphicon-home"></span></a> <b>UDTP - Unidade Dispensadora Tenente Pena</b></h4>
-            <h5 class="navbar-right navbar-text"><span class="estiloniver"> <?php echo (date('d-m-Y')); ?> | <span id="timer"></span></span></h5><span class="navbar-right navbar-text"></span>		            
+            <h5 class="navbar-right navbar-text"><span class="estiloniver"><span id="timer"></span></span></h5><span class="navbar-right navbar-text"></span>
 	</div>	
 </nav>
 <nav class="navbar"></nav>

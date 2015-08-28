@@ -1,0 +1,19 @@
+{
+    "name": "udtp/intranet",
+    "description": "Intranet",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Márcio Ramos",
+            "email": "marciomrs4@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+      "autoload": {
+
+      "psr-0": {
+        "app\\": "src/"
+    }
+  }
+}
